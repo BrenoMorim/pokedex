@@ -23,6 +23,8 @@
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    border: 5px solid var(--preto);
+    border-radius: 1.75rem;
 }
 
 .sprite {

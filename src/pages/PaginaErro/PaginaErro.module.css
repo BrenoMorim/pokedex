@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3vh;
+    padding: 3vh 4vw;
+}
+
+.titulo {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.subtitulo {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cinza);
+}
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }    
+    .subtitulo {
+        font-size: 1.5rem;
+    }
+}
+
+.imagem {
+    min-height: 200px;
+    min-width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 140%;
+}

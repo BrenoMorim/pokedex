@@ -1,5 +1,6 @@
 import styles from "./Pokemon.module.css";
 import { buscarPokemonPorNome } from "http";
+import PaginaErro from "pages/PaginaErro";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -10,10 +11,18 @@ export default function Pokemon() {
   
   useEffect(() => {
     async function buscar() {
-      setPokemon(await buscarPokemonPorNome(nome));
+      try {
+        setPokemon(await buscarPokemonPorNome(nome));
+      } catch(e) {
+        setPokemon({erro: true});
+      }
     }
     buscar();
   }, [nome]);
+  if (pokemon.erro) {
+    return <PaginaErro pokemon={nome}/>;
+  }
+
   return (
     <main className={styles.container}>
       <h1 className={styles.titulo}>{pokemon.name}</h1>

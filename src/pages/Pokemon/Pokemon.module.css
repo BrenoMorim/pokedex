@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .titulo {
@@ -29,8 +30,8 @@
 }
 
 .sprite {
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 15vh;
+    min-width: 15vw;
 }
 
 .informacoes {
@@ -38,7 +39,7 @@
     gap: 3rem;
     justify-content: center;
     width: max-content;
-    padding: 2rem 3rem;
+    padding: 2vh 3vw;
     border-radius: 1.75rem;
     border: 5px solid var(--cinza);
     color: var(--branco);
@@ -70,4 +71,24 @@
     width: 5px;
     background-color: var(--preto);
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+    .divisoria {
+        display: none;
+    }
+    .informacoes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .informacoes h3 {
+        font-size: 2rem;
+    }
+    .informacoes li {
+        font-size: 1.5rem;
+    }
 }

@@ -25,7 +25,7 @@ export default function Pokemon() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.titulo}>{pokemon.name}</h1>
+      <h1 className={styles.titulo}>#{pokemon.id} - {pokemon.name}</h1>
       <div className={styles.sectionsContainer}>
         <section className={styles.sprites}>
           <img 

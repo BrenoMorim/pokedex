@@ -32,7 +32,6 @@
     max-width: 3rem;
     max-height: 3rem;
     filter: invert();
-    transform: rotate(-15deg);
 }
 
 .icone {

@@ -1,21 +1,20 @@
 import ListaPokemons from "components/ListaPokemons";
-import { Pokedex } from "pokeapi-js-wrapper";
-import { useEffect, useMemo, useState } from "react";
+import { listarPokemons } from "http";
+import { useEffect, useState } from "react";
 
 export default function PaginaInicial() {
-	const pokedex = useMemo(() => new Pokedex(), []);
   const [lista, setLista] = useState([]);
-	useEffect(() => {
-		async function buscar() {
-			const res = await pokedex.getPokemonsList({limit: 10, offset: 0});
-			setLista(res.results);
-		}
-		buscar();
-	}, [pokedex]);
+  useEffect(() => {
+    async function buscar() {
+      const res = await listarPokemons({ limit: 10, offset: 0 });
+      setLista(res.results);
+    }
+    buscar();
+  }, []);
 
-	return (
-		<main>
-			<ListaPokemons pokemons={lista}/>
-		</main>
-	);
+  return (
+    <main>
+      <ListaPokemons pokemons={lista} />
+    </main>
+  );
 }

@@ -1,0 +1,34 @@
+.cabecalho {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 3vh 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.texto {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.imagem {
+    max-width: 3rem;
+    max-height: 3rem;
+    filter: invert();
+    transform: rotate(-15deg);
+}
+
+.icone {
+    max-height: 5.25rem;
+    max-width: 5.25rem;
+    transform: rotate(10deg);
+}

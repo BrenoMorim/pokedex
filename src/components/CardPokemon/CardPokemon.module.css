@@ -1,0 +1,32 @@
+.card {
+    width: 240px;
+    height: 320px;
+    border-radius: 1.5rem;
+    background-color: var(--vermelho);
+    border: 2px var(--cinza) solid;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.nomePokemon {
+    color: var(--branco);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.sprite {
+    height: 70%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-color: var(--cinza-claro);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom: var(--preto) 4px solid;
+}

@@ -9,7 +9,11 @@ export default function BuscaInput({placeholder}) {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.buscaContainer}>
+    <form className={styles.buscaContainer} onSubmit={(event) => {
+      event.preventDefault();
+      navigate(`/pokemon/${busca.toLowerCase()}`);
+      setBusca("");
+    }}>
       <input
         className={styles.buscaInput}
         type="text"
@@ -22,13 +26,8 @@ export default function BuscaInput({placeholder}) {
         <Search
           className={styles.iconeSearch}
           aria-label="Buscar"
-          onClick={() => {
-            if (!busca) return;
-            navigate(`/pokemon/${busca.toLowerCase()}`);
-            setBusca("");
-          }}
         />
       </button>
-    </div>
+    </form>
   );
 }

@@ -1,0 +1,13 @@
+.container {
+    padding: 2vh 2vw;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.geracao {
+    margin-bottom: 2rem;
+}

@@ -9,6 +9,14 @@ export async function buscarPokemonPorNome(nome) {
     return (await http.get(`pokemon/${nome}`)).data;
 }
 
-export async function listarPokemons(offset=0, limit=10) {
+export async function listarPokemons(offset, limit) {
     return (await http.get(`pokemon?offset=${offset}&limit=${limit}`)).data;
+}
+
+export async function buscarGeracoes() {
+    return (await http.get("generation")).data;
+}
+
+export async function detalharGeracao(id) {
+    return (await http.get(`generation/${id}`)).data;
 }

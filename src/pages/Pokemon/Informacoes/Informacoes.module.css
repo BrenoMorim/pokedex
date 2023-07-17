@@ -16,20 +16,28 @@
     margin: 0 0 1rem 0;
 }
 
-.informacoes ul {
+.dados {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    justify-content: center;
 }
 
-.informacoes li {
+.dados span {
     font-size: 2rem;
+    height: auto;
     text-transform: capitalize;
     text-align: center;
     list-style: none;
     font-weight: 300;
+    width: max-content;
     margin: 0;
     padding: 0;
-    color: var(--cinza-claro);
+    display: inline-block;
+    color: var(--creme);
 }
 
 .divisoria {
@@ -46,11 +54,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 1.5rem;
     }
     .informacoes h3 {
         font-size: 2rem;
     }
-    .informacoes li {
+    .dados span {
         font-size: 1.5rem;
     }
 }

@@ -17,6 +17,7 @@
     font-weight: 300;
     text-transform: capitalize;
     color: var(--vermelho);
+    margin: 1.5rem 0;
 }
 
 @media screen and (max-width: 768px) {

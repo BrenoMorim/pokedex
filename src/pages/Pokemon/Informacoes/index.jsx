@@ -1,3 +1,4 @@
+import Tipo from "components/Tipo";
 import styles from "./Informacoes.module.css";
 
 export default function Informacoes({pokemon}) {
@@ -5,28 +6,28 @@ export default function Informacoes({pokemon}) {
     <section className={styles.informacoes}>
       <div className={styles.tipos}>
         <h3>Tipos:</h3>
-        <ul>
+        <div className={styles.dados}>
           {pokemon.types?.map((tipo) => (
-            <li key={tipo.type.name}>{tipo.type.name}</li>
+            <Tipo key={tipo.type.name} nomeTipo={tipo.type.name}/>
           ))}
-        </ul>
+        </div>
       </div>
       <div className={styles.divisoria}></div>
       <div className={styles.medidas}>
         <h3>Medidas:</h3>
-        <ul>
-          <li>Peso: {pokemon.weight}</li>
-          <li>Altura: {pokemon.height}</li>
-        </ul>
+        <div className={styles.dados}>
+          <span>Peso: {pokemon.weight}</span>
+          <span>Altura: {pokemon.height}</span>
+        </div>
       </div>
       <div className={styles.divisoria}></div>
       <div className={styles.habilidades}>
         <h3>Habilidades:</h3>
-        <ul>
+        <div className={styles.dados}>
           {pokemon.abilities?.map((item) => (
-            <li key={item.ability.name}>{item.ability.name}</li>
+            <span key={item.ability.name}>{item.ability.name}</span>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

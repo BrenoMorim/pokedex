@@ -10,9 +10,14 @@ import { listarPokemons } from "http";
 
 export default function Pokemon() {
 
+  
   const { nome } = useParams();
   const [pokemon, setPokemon] = useState({});
   const [pokemonsRelacionados, setPokemonsRelacionados] = useState([]);
+  
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0});
+  }, [nome]);
 
   useEffect(() => {
     async function buscar() {

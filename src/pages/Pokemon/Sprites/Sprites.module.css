@@ -6,6 +6,7 @@
     border: 5px solid var(--preto);
     border-radius: 1.75rem;
     padding: .5rem;
+    background: var(--fundo-gradiente);
 }
 
 .sprite {

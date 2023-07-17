@@ -1,8 +1,10 @@
 :root {
     --vermelho: #B31312;
     --branco: #EEEEEE;
-    --cinza-claro: #e9e9e6;
+    --creme: #e2e4e8;
+    --cinza-claro: #a2a297;
     --cinza: #3f3d43;
     --preto: #202020;
     --fonte-principal: 'Lilita One', cursive;
+    --fundo-gradiente: linear-gradient(45deg, var(--cinza-claro), var(--branco));
 }

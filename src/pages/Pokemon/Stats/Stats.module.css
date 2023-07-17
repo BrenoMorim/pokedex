@@ -1,0 +1,49 @@
+.stats {
+    padding: 2vh 4vw;
+}
+
+.titulo {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--vermelho);
+}
+
+.statsTabela {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.statNome {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--vermelho);
+    padding-bottom: .25rem;
+    border-bottom: 4px solid var(--vermelho);
+}
+
+.statValor {
+    font-size: 1.25rem;
+    color: var(--preto);
+}
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+    .statNome {
+        font-size: 1.25rem;
+    }
+    .statValor {
+        font-size: 1rem;
+    }
+}

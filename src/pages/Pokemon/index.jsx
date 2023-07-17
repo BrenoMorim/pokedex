@@ -7,9 +7,9 @@ import Sprites from "./Sprites";
 import Informacoes from "./Informacoes";
 import ListaPokemons from "components/ListaPokemons";
 import { listarPokemons } from "http";
+import Stats from "./Stats";
 
 export default function Pokemon() {
-
   
   const { nome } = useParams();
   const [pokemon, setPokemon] = useState({});
@@ -46,6 +46,9 @@ export default function Pokemon() {
         <Sprites pokemon={pokemon}/>
         <Informacoes pokemon={pokemon}/>
       </div>
+      {pokemon.stats &&
+        <Stats stats={pokemon?.stats}/>
+      }
       <h2 className={styles.titulo}>Pokémons próximos na Pokédex:</h2>
       <ListaPokemons pokemons={pokemonsRelacionados}/>
     </main>

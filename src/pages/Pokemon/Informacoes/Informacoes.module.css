@@ -5,7 +5,7 @@
     width: max-content;
     padding: 2vh 3vw;
     border-radius: 1.75rem;
-    border: 5px solid var(--cinza);
+    border: 5px solid var(--preto);
     color: var(--branco);
     background-color: var(--vermelho);
 }

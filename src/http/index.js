@@ -1,22 +1,36 @@
 import axios from 'axios';
 
+const cache = new Map();
+
 export const http = axios.create({
     baseURL: "https://pokeapi.co/api/v2/",
     timeout: 5000
 });
 
+async function get(url) {
+    if (cache.has(url)) return cache.get(url);
+
+    const resposta = (await http.get(url)).data;
+    cache.set(url, resposta); 
+    return resposta;
+}
+
 export async function buscarPokemonPorNome(nome) {
-    return (await http.get(`pokemon/${nome}`)).data;
+    const url = `pokemon/${nome}`;
+    return get(url);
 }
 
 export async function listarPokemons(offset, limit) {
-    return (await http.get(`pokemon?offset=${offset}&limit=${limit}`)).data;
+    const url = `pokemon?offset=${offset}&limit=${limit}`;
+    return get(url);
 }
 
 export async function buscarGeracoes() {
-    return (await http.get("generation")).data;
+    const url = "generation";
+    return get(url);
 }
 
 export async function detalharGeracao(id) {
-    return (await http.get(`generation/${id}`)).data;
+    const url = `generation/${id}`;
+    return get(url);
 }

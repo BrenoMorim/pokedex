@@ -46,7 +46,7 @@ export default function Pokemon() {
         <Sprites pokemon={pokemon}/>
         <Informacoes pokemon={pokemon}/>
       </div>
-      <h2 className={styles.titulo}>Pokemóns próximos na pokedex:</h2>
+      <h2 className={styles.titulo}>Pokémons próximos na Pokédex:</h2>
       <ListaPokemons pokemons={pokemonsRelacionados}/>
     </main>
   );

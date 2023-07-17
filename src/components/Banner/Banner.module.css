@@ -1,0 +1,52 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 5vh 2vw 20vh 2vw;
+}
+
+.banner::before {    
+    content: "";
+    background-repeat: no-repeat;
+    background-image: url("./banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    filter: brightness(0.7);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+}
+
+.titulo {
+    font-weight: 400;
+    font-size: 3.75rem;
+    position: relative;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+.paragrafo {
+    font-weight: 400;
+    font-size: 2rem;
+    position: relative;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        min-height: auto;
+        padding: 3rem;
+    }
+    .titulo {
+        font-size: 2.5rem;
+    }
+    .paragrafo {
+        font-size: 1.75rem;
+    }
+}

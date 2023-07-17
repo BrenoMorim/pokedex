@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import geracoes from "data/geracoes.js";
 import Botao from "components/Botao";
 import { useNavigate } from "react-router-dom";
+import Banner from "components/Banner";
 
 export default function PaginaInicial() {
   const [listaGeracoes, setListaGeracoes] = useState([]);
@@ -18,6 +19,8 @@ export default function PaginaInicial() {
   }, [])
 
   return (
+  <>
+    <Banner />
     <main className={styles.container}>
       {listaGeracoes.map((geracao, index) => {
         return (
@@ -27,10 +30,11 @@ export default function PaginaInicial() {
             <Botao
               onClick={() => navigate(`/geracoes/${index}`)} 
               tamanhoFonte="1.25rem"
-            >Ver mais pokemons dessa geração</Botao>
+              >Ver mais pokémons dessa geração</Botao>
           </div>
         );
       })}
     </main>
+    </>
   );
 }

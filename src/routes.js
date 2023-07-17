@@ -3,6 +3,7 @@ import PaginaInicial from "./pages/PaginaInicial";
 import Cabecalho from "components/Cabecalho";
 import Pokemon from "pages/Pokemon";
 import PaginaErro from "pages/PaginaErro";
+import Rodape from "components/Rodape";
 
 export default function AppRoutes() {
     return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
                 <Route path="pokemon/:nome" Component={Pokemon} />
                 <Route path="*" Component={PaginaErro}/>
             </Routes>
+            <Rodape/>
         </BrowserRouter>
     );
 }

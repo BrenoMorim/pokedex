@@ -1,0 +1,47 @@
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--branco);;
+}
+
+.logo.pequena {
+    gap: 1rem;
+}
+
+.logo.grande {
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.logo.grande:hover {
+    opacity: 0.8;
+}
+
+.texto {
+    margin: 0;
+    font-weight: 400;
+}
+
+.grande.texto {
+    font-size: 3rem;
+}
+
+.pequena.texto {
+    font-size: 1.75rem;
+}
+
+.imagem {
+    filter: invert();
+}
+
+.pequena.imagem {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+
+.grande.imagem {
+    max-width: 3rem;
+    max-height: 3rem;
+}

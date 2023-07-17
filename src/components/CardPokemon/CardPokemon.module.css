@@ -28,5 +28,6 @@
     background-color: var(--cinza-claro);
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    border-bottom: var(--preto) 4px solid;
+    border: var(--preto) 3px solid;
+    box-sizing: border-box;
 }

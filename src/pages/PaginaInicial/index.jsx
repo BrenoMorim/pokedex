@@ -12,7 +12,7 @@ export default function PaginaInicial() {
 
   useEffect(() => {
     const promessas = geracoes.map(async (geracao) => {
-      return {nome: geracao.nome, pokemons: (await listarPokemons(geracao.start, 5)).results}; 
+      return {nome: geracao.nome, pokemons: (await listarPokemons(geracao.start - 1, 5)).results}; 
     });
     Promise.all(promessas).then(resultado => setListaGeracoes(resultado));
   }, [])

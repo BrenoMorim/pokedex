@@ -1,7 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./CardPokemon.module.css";
+import { useEffect } from "react";
 
 export default function CardPokemon({ pokemon }) {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0});
+  }, []);
+
   const split = pokemon.url.split("/");
   const navigate = useNavigate();
   const id = split[split.length - 2];

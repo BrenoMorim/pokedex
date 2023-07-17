@@ -1,0 +1,14 @@
+.sprites {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    border: 5px solid var(--preto);
+    border-radius: 1.75rem;
+    padding: .5rem;
+}
+
+.sprite {
+    min-height: 15vh;
+    min-width: 15vw;
+}

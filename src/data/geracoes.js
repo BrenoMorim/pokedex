@@ -9,19 +9,19 @@ const geracoes = [
     },
     {
         nome: "Geração 3",
-        start: 253
+        start: 252
     },
     {
         nome: "Geração 4",
-        start: 389
+        start: 387
     },
     {
         nome: "Geração 5",
-        start: 497
+        start: 495
     },
     {
         nome: "Geração 6",
-        start: 654
+        start: 653
     },
     {
         nome: "Geração 7",

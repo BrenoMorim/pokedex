@@ -3,16 +3,27 @@ import { buscarPokemonPorNome } from "http";
 import PaginaErro from "pages/PaginaErro";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Sprites from "./Sprites";
+import Informacoes from "./Informacoes";
+import ListaPokemons from "components/ListaPokemons";
+import { listarPokemons } from "http";
 
 export default function Pokemon() {
 
   const { nome } = useParams();
   const [pokemon, setPokemon] = useState({});
-  
+  const [pokemonsRelacionados, setPokemonsRelacionados] = useState([]);
+
   useEffect(() => {
     async function buscar() {
       try {
-        setPokemon(await buscarPokemonPorNome(nome));
+        const pokemonEncontrado = await buscarPokemonPorNome(nome);
+        setPokemon(pokemonEncontrado);
+        let idInicial = (pokemonEncontrado.id - 6)
+        if (idInicial < 0) {
+          idInicial = pokemonEncontrado.id;
+        }
+        setPokemonsRelacionados((await listarPokemons(idInicial, 5)).results);
       } catch(e) {
         setPokemon({erro: true});
       }
@@ -27,42 +38,11 @@ export default function Pokemon() {
     <main className={styles.container}>
       <h1 className={styles.titulo}>#{pokemon.id} - {pokemon.name}</h1>
       <div className={styles.sectionsContainer}>
-        <section className={styles.sprites}>
-          <img 
-            className={styles.sprite} 
-            src={pokemon.sprites?.front_default} 
-            alt={`Imagem da versão padrão do ${pokemon.name}`}
-          />
-          <img 
-            className={styles.sprite} 
-            src={pokemon.sprites?.front_shiny} 
-            alt={`Imagem da versão radiante do ${pokemon.name}`}
-          />
-        </section>
-        <section className={styles.informacoes}>
-          <div className={styles.tipos}>
-            <h3>Tipos:</h3>
-            <ul>
-              {pokemon.types?.map(tipo => <li key={tipo.type.name}>{tipo.type.name}</li>)}
-            </ul>
-          </div>
-          <div className={styles.divisoria}></div>
-          <div className={styles.medidas}>
-            <h3>Medidas:</h3>
-            <ul>
-              <li>Peso: {pokemon.weight}</li>
-              <li>Altura: {pokemon.height}</li>
-            </ul>
-          </div>
-          <div className={styles.divisoria}></div>
-          <div className={styles.habilidades}>
-            <h3>Habilidades:</h3>
-            <ul>
-              {pokemon.abilities?.map(item => <li key={item.ability.name}>{item.ability.name}</li>)}
-            </ul>
-          </div>
-        </section>
+        <Sprites pokemon={pokemon}/>
+        <Informacoes pokemon={pokemon}/>
       </div>
+      <h2 className={styles.titulo}>Pokemóns próximos na pokedex:</h2>
+      <ListaPokemons pokemons={pokemonsRelacionados}/>
     </main>
   );
 }

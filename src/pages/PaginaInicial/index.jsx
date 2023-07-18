@@ -28,7 +28,7 @@ export default function PaginaInicial() {
             <h2 className={styles.titulo}>{geracao.nome}:</h2>
             <ListaPokemons pokemons={geracao.pokemons} />
             <Botao
-              onClick={() => navigate(`/geracoes/${index + 1}`)} 
+              onClick={() => navigate(`/generation/${index + 1}`)} 
               tamanhoFonte="1.25rem"
               >Ver mais pokémons dessa geração</Botao>
           </div>

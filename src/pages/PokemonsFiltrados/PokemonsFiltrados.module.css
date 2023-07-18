@@ -1,0 +1,16 @@
+.container {
+    padding: 3vh 4vw;
+}
+
+.titulo {
+    color: var(--vermelho);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.botaoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

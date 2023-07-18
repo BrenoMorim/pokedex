@@ -2,8 +2,15 @@ import { useNavigate } from "react-router-dom";
 import styles from "./PaginaErro.module.css";
 import Botao from "components/Botao";
 
-export default function PaginaErro({pokemon=""}) {
+export default function PaginaErro({pokemon="", filtro=""}) {
   const navigate = useNavigate();
+  let mensagem = "A página que você estava buscando não foi encontrada =(";
+
+  if (pokemon) {
+    mensagem = `O pokémon "${pokemon}" não foi encontrado, será que você escreveu o nome dele errado?`;
+  } else if (filtro) {
+    mensagem = `Não encontramos nenhum Pokémon com esse filtro: "${filtro}"`;
+  }
 
   return (
     <main className={styles.container}>
@@ -13,10 +20,7 @@ export default function PaginaErro({pokemon=""}) {
         style={{backgroundImage: "url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/287.png)"}} 
       ></div>
       <h3 className={styles.subtitulo}>
-        {pokemon ? 
-          `O pokémon "${pokemon}" não foi encontrado, será que você escreveu o nome dele errado?` 
-          : 
-          "A página que você estava buscando não foi encontrada =("}
+        {mensagem}
       </h3>
       <Botao onClick={() => navigate("/")}>Voltar para Página Inicial</Botao>
     </main>

@@ -21,7 +21,6 @@ export default function NavBar() {
         {titulo: "Tipos", url: "type", submenu: tipos.map(t => t.name)},
         {titulo: "Regiões", url: "region", submenu: regioes.map(r => r.name)}
       ];
-      console.log(itens);
       setMenuItens(itens);
     }
 
@@ -29,10 +28,6 @@ export default function NavBar() {
 
   }, []);
 
-  /*const menuItens = [
-    {titulo: "Regiões", url: "region", submenu: ["kanto", "johto"]},
-    {titulo: "Tipos", url: "type", submenu: ["normal", "flying"]}
-  ];*/
   return (
     <nav className={styles.navbar}>
       <ul className={styles.menus}>

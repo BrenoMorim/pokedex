@@ -5,6 +5,7 @@ import Pokemon from "pages/Pokemon";
 import PaginaErro from "pages/PaginaErro";
 import Rodape from "components/Rodape";
 import NavBar from "components/NavBar";
+import PokemonsFiltrados from "pages/PokemonsFiltrados";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,9 @@ export default function AppRoutes() {
             <Routes path="/">
                 <Route index Component={PaginaInicial}/>
                 <Route path="pokemon/:nome" Component={Pokemon} />
+                <Route path="generation/:nome" element={<PokemonsFiltrados filtro="generation"/>}/>
+                <Route path="type/:nome" element={<PokemonsFiltrados filtro="type"/>}/>
+                <Route path="region/:nome" element={<PokemonsFiltrados filtro="region"/>}/>
                 <Route path="*" Component={PaginaErro}/>
             </Routes>
             <Rodape/>

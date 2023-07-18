@@ -1,0 +1,18 @@
+.navbar {
+    background-color: var(--vermelho-alternativo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menus {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    position: relative;
+}

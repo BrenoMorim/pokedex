@@ -1,0 +1,30 @@
+.dropdown {
+    padding-top: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    translate: 1rem;
+}
+
+.submenu {
+    background-color: var(--branco);
+    list-style: none;
+    margin: 0;
+    border: 2px solid var(--preto);
+    padding: .5rem;
+    font-size: 1rem;
+    color: var(--preto);
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 500ms;
+}
+
+.submenu:hover {
+    color: var(--vermelho);
+}
+

@@ -4,11 +4,13 @@ import Cabecalho from "components/Cabecalho";
 import Pokemon from "pages/Pokemon";
 import PaginaErro from "pages/PaginaErro";
 import Rodape from "components/Rodape";
+import NavBar from "components/NavBar";
 
 export default function AppRoutes() {
     return (
         <BrowserRouter>
             <Cabecalho/>
+            <NavBar/>
             <Routes path="/">
                 <Route index Component={PaginaInicial}/>
                 <Route path="pokemon/:nome" Component={Pokemon} />

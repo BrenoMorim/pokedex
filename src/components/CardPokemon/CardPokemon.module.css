@@ -17,6 +17,7 @@
     color: var(--branco);
     font-size: 2rem;
     text-transform: capitalize;
+    text-decoration: none;
 }
 
 .sprite {

@@ -1,3 +1,5 @@
+import styles from "./Tipo.module.css";
+import { Link } from "react-router-dom";
 import { tipos } from "./tipos.js";
 
 export default function Tipo({nomeTipo}) {
@@ -9,14 +11,14 @@ export default function Tipo({nomeTipo}) {
 
     const estilo = {
         backgroundColor: cores.corPrimaria,
+        textTransform: "uppercase",
+        textDecoration: "none",
         color: cores.corSecundaria,
-        padding: ".25rem .75rem",
-        borderRadius: "1rem",
-        fontSize: "1.5rem",
+        
         border: `3px solid ${cores.corSecundaria}`
     }
 
     return (
-        <span style={estilo}>{nomeTipo}</span>
+        <Link className={styles.tipo} style={estilo} to={`/type/${nomeTipo}`}>{nomeTipo}</Link>
     );
 }

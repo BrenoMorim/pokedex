@@ -2,7 +2,13 @@
 
 Projeto em React-js que usa a PokeAPI para listar os Pokémons, permitindo buscas por tipo, nome, geração e entre outras funcionalidades.
 
-![Página do Pokémon Charizard, contendo seus detalhes](./imagens/pokemon-charizard.png)
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Pokédex**
+| :label: Tecnologias | React, JavaScript, HTML, CSS
+| :rocket: URL         | <https://github.com/BrenoMorim/pokedex/>
+
+![Página do Pokémon Charizard, contendo seus detalhes](https://github.com/BrenoMorim/pokedex/blob/development/imagens/pokemon-charizard.png?raw=true#vitrinedev)
 
 ## Detalhes do Projeto
 

@@ -10,21 +10,30 @@ import { Suspense } from "react";
 import Carregando from "components/Carregando";
 
 export default function AppRoutes() {
-    return (
-        <BrowserRouter>
-            <Cabecalho/>
-            <NavBar/>
-            <Suspense fallback={<Carregando/>}>
-                <Routes path="/">
-                    <Route index Component={PaginaInicial}/>
-                    <Route path="pokemon/:nome" Component={Pokemon} />
-                    <Route path="generation/:nome" element={<PokemonsFiltrados filtro="generation"/>}/>
-                    <Route path="type/:nome" element={<PokemonsFiltrados filtro="type"/>}/>
-                    <Route path="region/:nome" element={<PokemonsFiltrados filtro="region"/>}/>
-                    <Route path="*" Component={PaginaErro}/>
-                </Routes>
-            </Suspense>
-            <Rodape/>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Cabecalho />
+      <NavBar />
+      <Suspense fallback={<Carregando />}>
+        <Routes path="/">
+          <Route index Component={PaginaInicial} />
+          <Route path="pokemon/:nome" Component={Pokemon} />
+          <Route
+            path="generation/:nome"
+            element={<PokemonsFiltrados filtro="generation" />}
+          />
+          <Route
+            path="type/:nome"
+            element={<PokemonsFiltrados filtro="type" />}
+          />
+          <Route
+            path="region/:nome"
+            element={<PokemonsFiltrados filtro="region" />}
+          />
+          <Route path="*" Component={PaginaErro} />
+        </Routes>
+      </Suspense>
+      <Rodape />
+    </BrowserRouter>
+  );
 }

@@ -49,7 +49,7 @@ export default function Pokemon() {
       {pokemon.stats &&
         <Stats stats={pokemon?.stats}/>
       }
-      <h2 className={styles.titulo}>Pokémons próximos na Pokédex:</h2>
+      <h2 className={styles.titulo}>Pokémons próximos na Pokédex</h2>
       <ListaPokemons pokemons={pokemonsRelacionados}/>
     </main>
   );

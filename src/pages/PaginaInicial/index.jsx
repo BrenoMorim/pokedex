@@ -25,12 +25,14 @@ export default function PaginaInicial() {
       {listaGeracoes.map((geracao, index) => {
         return (
           <div className={styles.geracao} key={geracao.nome}>
-            <h2 className={styles.titulo}>{geracao.nome}:</h2>
+            <h2 className={styles.titulo}>{geracao.nome}</h2>
             <ListaPokemons pokemons={geracao.pokemons} />
             <Botao
               onClick={() => navigate(`/generation/${index + 1}`)} 
               tamanhoFonte="1.25rem"
-              >Ver mais pokémons dessa geração</Botao>
+            >
+              Ver mais pokémons dessa geração
+            </Botao>
           </div>
         );
       })}

@@ -22,10 +22,7 @@
 .sprite {
     height: 70%;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-color: var(--creme);
+    background: var(--fundo-gradiente);
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border: var(--preto) 3px solid;

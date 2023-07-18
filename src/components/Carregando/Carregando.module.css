@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: var(--vermelho);
+    font-weight: 400;
+}
+
+.loader {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border: 2rem solid var(--creme);
+    border-top: 2rem solid var(--vermelho);
+    border-left: 2rem solid var(--vermelho);
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    max-width: 120px;
+    max-height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

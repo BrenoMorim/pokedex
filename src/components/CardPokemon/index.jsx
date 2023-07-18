@@ -8,12 +8,11 @@ export default function CardPokemon({ pokemon }) {
   const id = split[split.length - 2];
   return (
     <article className={styles.card} onClick={() => navigate(`/pokemon/${pokemon.name}`)}>
-      <div
+      <img 
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} 
+        alt={`Sprite oficial do pokémon ${pokemon.name}`}
         className={styles.sprite}
-        style={{
-          backgroundImage: `url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png)`
-        }}
-      ></div>
+      />
       <p className={styles.nomePokemon}>{pokemon.name}</p>
     </article>
   );

@@ -6,9 +6,11 @@ Projeto em React-js que usa a PokeAPI para listar os Pokémons, permitindo busca
 | -------------  | --- |
 | :sparkles: Nome        | **Pokédex**
 | :label: Tecnologias | React, JavaScript, HTML, CSS
-| :rocket: URL         | <https://github.com/BrenoMorim/pokedex/>
+| :rocket: URL         | <https://pokedex-brenomorim.vercel.app/>
 
 ![Página do Pokémon Charizard, contendo seus detalhes](https://github.com/BrenoMorim/pokedex/blob/development/imagens/pokemon-charizard.png?raw=true#vitrinedev)
+
+## Link para deploy da Vercel: <https://pokedex-brenomorim.vercel.app/>
 
 ## Detalhes do Projeto
 
@@ -23,6 +25,10 @@ O site segue o padrão de SPA, usando a biblioteca react-router-dom, por padrão
 ![Página inicial, com seu banner](./imagens/pagina-inicial.png)
 
 ![Listas dos Pokémons de cada geração](./imagens/lista-geracoes.png)
+
+> A barra de navegação abaixo do cabeçalho pode ser usada para fazer buscas por tipo, região e geração.
+
+![Barra de navegação](./imagens/barra-navegacao.png)
 
 ### Página de Detalhes - Mostra os dados de um Pokémon específico, suas sprites, atributos, tipos, habilidades e Pokémons próximos na Pokédex
 

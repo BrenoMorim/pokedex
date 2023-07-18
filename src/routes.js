@@ -1,13 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PaginaInicial from "./pages/PaginaInicial";
 import Cabecalho from "components/Cabecalho";
-import Pokemon from "pages/Pokemon";
-import PaginaErro from "pages/PaginaErro";
 import Rodape from "components/Rodape";
 import NavBar from "components/NavBar";
-import PokemonsFiltrados from "pages/PokemonsFiltrados";
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import Carregando from "components/Carregando";
+
+const PaginaInicial = lazy(() => import("pages/PaginaInicial"));
+const PokemonsFiltrados = lazy(() => import("pages/PokemonsFiltrados")); 
+const PaginaErro = lazy(() => import("pages/PaginaErro"));
+const Pokemon = lazy(() => import("pages/Pokemon"));
 
 export default function AppRoutes() {
   return (

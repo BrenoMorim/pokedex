@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import styles from "./PokemonsFiltrados.module.css";
 import { useParams } from "react-router-dom";
 import { detalharGeracao } from "http";
-import PaginaErro from "pages/PaginaErro";
 import ListaPokemons from "components/ListaPokemons";
 import { detalharTipo } from "http";
 import { detalharRegiao } from "http";
 import Botao from "components/Botao";
+
+const PaginaErro = lazy(() => import("pages/PaginaErro"));
 
 export default function PokemonsFiltrados({ filtro }) {
   

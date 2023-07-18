@@ -1,13 +1,14 @@
 import styles from "./Pokemon.module.css";
 import { buscarPokemonPorNome } from "http";
-import PaginaErro from "pages/PaginaErro";
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Sprites from "./Sprites";
 import Informacoes from "./Informacoes";
 import ListaPokemons from "components/ListaPokemons";
 import { listarPokemons } from "http";
 import Stats from "./Stats";
+
+const PaginaErro = lazy(() => import("pages/PaginaErro"));
 
 export default function Pokemon() {
   

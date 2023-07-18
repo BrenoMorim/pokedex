@@ -4,7 +4,7 @@ const cache = new Map();
 
 export const http = axios.create({
     baseURL: "https://pokeapi.co/api/v2/",
-    timeout: 5000
+    timeout: 10000
 });
 
 async function get(url) {

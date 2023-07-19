@@ -47,13 +47,14 @@ export default function PokemonsFiltrados({ filtro }) {
         });
         setDados(pokemonsEncontrados);
         setPokemons(pokemonsEncontrados.slice(0, 15));
+        setErro(false);
       } catch {
         setErro(true);
       }
     }
 
     buscarDados();
-  }, [filtro, nome]);
+  }, [nome, filtro]);
 
   if (erro) return <PaginaErro filtro={nome} />;
 

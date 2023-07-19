@@ -6,12 +6,13 @@ export default function IconePikachu({tamanho = "grande"}) {
     maxHeight: tamanhoEmPixels,
     maxWidth: tamanhoEmPixels,
     transform: "rotate(10deg)"
-  }
+  };
 
   return (
     <img
       style={styles}
       src={pikachu}
+      className="animate__animated animate__bounceInDown"
       alt="Foto do rosto do pikachu, extraído de um dos jogos"
     />
   );

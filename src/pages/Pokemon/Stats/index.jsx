@@ -2,7 +2,7 @@ import styles from "./Stats.module.css";
 
 export default function Stats({ stats }) {
   return (
-    <section className={styles.stats}>
+    <section className={`${styles.stats} animate__animated animate__bounceInUp`}>
       <h3 className={styles.titulo}>Atributos</h3>
       <div className={styles.statsTabela}>
         {stats.map(dados => (

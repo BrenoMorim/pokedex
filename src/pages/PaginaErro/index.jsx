@@ -14,7 +14,7 @@ export default function PaginaErro({pokemon="", filtro=""}) {
 
   return (
     <main className={styles.container}>
-      <h2 className={styles.titulo}>Ops! Um erro aconteceu...</h2>
+      <h2 className={`${styles.titulo} animate__animated animate__bounceIn`}>Ops! Um erro aconteceu...</h2>
       <div
         className={styles.imagem}
         style={{backgroundImage: "url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/287.png)"}} 

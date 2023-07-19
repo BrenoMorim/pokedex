@@ -8,14 +8,14 @@ export default function Dropdown({ submenus, url, ativo }) {
       style={{display: ativo ? "block" : "none"}}
     >
       {submenus.map(submenu => (
-          <Link
-            className={styles.submenu}
-            key={`${url}/${submenu}`} 
-            to={`${url}/${submenu}`}
-          >
-            {submenu}
-          </Link>
-        ))}
+        <Link
+          className={styles.submenu}
+          key={`${url}/${submenu}`} 
+          to={`${url}/${submenu}`}
+        >
+          {submenu}
+        </Link>
+      ))}
     </div>
   );
 }

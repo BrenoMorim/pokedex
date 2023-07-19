@@ -25,7 +25,7 @@ export default function Pokemon() {
       try {
         const pokemonEncontrado = await buscarPokemonPorNome(nome);
         setPokemon(pokemonEncontrado);
-        let idInicial = (pokemonEncontrado.id - 6)
+        let idInicial = (pokemonEncontrado.id - 6);
         if (idInicial < 0) {
           idInicial = pokemonEncontrado.id;
         }
@@ -42,8 +42,8 @@ export default function Pokemon() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.titulo}>#{pokemon.id} - {pokemon.name}</h1>
-      <div className={styles.sectionsContainer}>
+      <h1 className={`${styles.titulo} animate__animated animate__fadeInUp`}>#{pokemon.id} - {pokemon.name}</h1>
+      <div className={`${styles.sectionsContainer} animate__animated animate__fadeInUp`}>
         <Sprites pokemon={pokemon}/>
         <Informacoes pokemon={pokemon}/>
       </div>

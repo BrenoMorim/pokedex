@@ -12,18 +12,17 @@ export default function PaginaInicial() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const promessas = geracoes.map(async (geracao) => {
-      return {nome: geracao.nome, pokemons: (await listarPokemons(geracao.start - 1, 5)).results}; 
-    });
+    const promessas = geracoes.map(async (geracao) => (
+      {nome: geracao.nome, pokemons: (await listarPokemons(geracao.start - 1, 5)).results}
+    ));
     Promise.all(promessas).then(resultado => setListaGeracoes(resultado));
-  }, [])
+  }, []);
 
   return (
-  <>
-    <Banner />
-    <main className={styles.container}>
-      {listaGeracoes.map((geracao, index) => {
-        return (
+    <>
+      <Banner />
+      <main className={styles.container}>
+        {listaGeracoes.map((geracao, index) => (
           <div className={styles.geracao} key={geracao.nome}>
             <h2 className={styles.titulo}>{geracao.nome}</h2>
             <ListaPokemons pokemons={geracao.pokemons} />
@@ -34,9 +33,8 @@ export default function PaginaInicial() {
               Ver mais pokémons dessa geração
             </Botao>
           </div>
-        );
-      })}
-    </main>
+        ))}
+      </main>
     </>
   );
 }

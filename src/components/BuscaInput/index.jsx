@@ -9,7 +9,7 @@ export default function BuscaInput({placeholder}) {
   const navigate = useNavigate();
 
   return (
-    <form className={styles.buscaContainer} onSubmit={(event) => {
+    <form className={`${styles.buscaContainer} animate__animated animate__bounceInDown`} onSubmit={(event) => {
       event.preventDefault();
       navigate(`/pokemon/${busca.toLowerCase()}`);
       setBusca("");

@@ -8,15 +8,15 @@ export default function MenuItens({itens}) {
 
   return (
     <li className={styles.menuItens}>
-        <button 
-          className={styles.menu} 
-          type="button" 
-          aria-haspopup="menu" 
-          onClick={() => setAtivo(!ativo)}
-        >
-          {itens.titulo}{ativo ? "▼" : "➤"}
-        </button>
-        <Dropdown setAtivo={setAtivo} submenus={itens.submenu} url={itens.url} ativo={ativo} />
+      <button 
+        className={`${styles.menu} animate__animated animate__fadeIn`} 
+        type="button" 
+        aria-haspopup="menu" 
+        onClick={() => setAtivo(!ativo)}
+      >
+        {itens.titulo}{ativo ? "▼" : "➤"}
+      </button>
+      <Dropdown setAtivo={setAtivo} submenus={itens.submenu} url={itens.url} ativo={ativo} />
     </li>
   );
 }

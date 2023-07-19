@@ -65,7 +65,7 @@ export default function PokemonsFiltrados({ filtro }) {
   return (
     <main className={styles.container}>
       <h1 className={styles.titulo}>{titulos[filtro]}</h1>
-        <ListaPokemons  pokemons={pokemons}/>
+      <ListaPokemons  pokemons={pokemons}/>
       <div className={styles.botaoContainer}>
         {(dados.length > pokemons.length && dados.length > 0) && 
           <Botao onClick={carregarMais}>Carregar mais</Botao>

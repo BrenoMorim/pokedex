@@ -12,7 +12,7 @@ export default function Sprites({ pokemon }) {
         className={styles.sprite}
         src={pokemon.sprites?.front_shiny}
         alt=""
-        onError={(event) => {event.target.style.display = 'none'}}
+        onError={(event) => {event.target.style.display = 'none';}}
       />
     </section>
   );

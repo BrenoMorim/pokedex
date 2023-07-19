@@ -1,7 +1,7 @@
 .logo {
     display: flex;
     align-items: center;
-    color: var(--branco);;
+    color: var(--branco);
 }
 
 .logo.pequena {

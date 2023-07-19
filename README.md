@@ -2,21 +2,21 @@
 
 Projeto em React-js que usa a PokeAPI para listar os Pokémons, permitindo buscas por tipo, nome, geração e entre outras funcionalidades.
 
-| :placard: Vitrine.Dev |     |
-| -------------  | --- |
-| :sparkles: Nome        | **Pokédex**
-| :label: Tecnologias | React, JavaScript, HTML, CSS
-| :rocket: URL         | <https://pokedex-brenomorim.vercel.app/>
+| :placard: Vitrine.Dev |                                          |
+| --------------------  | ---------------------------------------- |
+| :sparkles: Nome       | **Pokédex**                              |
+| :label: Tecnologias   | React, JavaScript, HTML, CSS             |
+| :rocket: URL          | <https://pokedex-brenomorim.vercel.app/> |
 
 ![Página do Pokémon Charizard, contendo seus detalhes](https://github.com/BrenoMorim/pokedex/blob/development/imagens/pokemon-charizard.png?raw=true#vitrinedev)
 
-## Link para deploy da Vercel: <https://pokedex-brenomorim.vercel.app/>
+## Link do deploy da Vercel: <https://pokedex-brenomorim.vercel.app/>
 
 ## Detalhes do Projeto
 
 O projeto usa a biblioteca axios para buscar as informações na PokeAPI, aplicando um cache com memoização para evitar fazer requisições desnecessárias. A biblioteca React foi usada para criar os componentes funcionais e reutilizáveis, usando dos hooks useEffect e useState para buscar os dados de forma assíncrona, contendo um componente de Carregando para dar feedback visual ao usuário em casos de demora nas requisições HTTP.
 
-O site segue o padrão de SPA, usando a biblioteca react-router-dom, por padrão os componentes de cabeçalho, barra de navegação e rodápe são colocados em todas as páginas. O mesmo componente de Carregando que é usado para as listas de Pokémons é também usado como fallback nas rotas, em caso de demora no carregamento.
+O site segue o padrão de SPA, usando a biblioteca react-router-dom, por padrão os componentes de cabeçalho, barra de navegação e rodápe são colocados em todas as páginas. O mesmo componente de Carregando que é usado para as listas de Pokémons é também usado como fallback nas rotas, em caso de demora no carregamento. O projeto também conta com animações da biblioteca animate.css.
 
 ## Páginas
 

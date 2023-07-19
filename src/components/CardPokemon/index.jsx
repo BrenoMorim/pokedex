@@ -12,7 +12,7 @@ export default function CardPokemon({ pokemon }) {
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} 
           alt={`Sprite oficial do pokémon ${pokemon.name}`}
           className={styles.sprite}
-          />
+        />
         <p className={styles.nomePokemon}>{pokemon.name}</p>
       </article>
     </Link>
